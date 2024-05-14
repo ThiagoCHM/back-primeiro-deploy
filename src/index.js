@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 
@@ -7,4 +8,4 @@ app.get('/', async (req, res) => {
     return res.json('Ok!')
 })
 
-app.listen(3000)
+app.listen(3000, () => { console.log(process.env.THIAGO) })
